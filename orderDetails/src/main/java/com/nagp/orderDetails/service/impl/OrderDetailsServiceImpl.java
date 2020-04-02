@@ -35,12 +35,14 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
 	public Response<OrderDetailsDto> getUserOrderDetails(String userId) {
 		
 		RestTemplate restTemplate = new RestTemplate();
-		
-		String orderUrl = "http://localhost:8050/order/1";
+//		System.out.println(System.getenv("ES_HOME"));
+//		System.out.println(System.getenv("OneDrive"));
+//		System.getenv(String name);
+		String orderUrl = System.getenv("order_path");
 		Response<List<OrderDto>> orderResponse = new Response<List<OrderDto>>();
 		ResponseEntity<Response<List<OrderDto>>> orderResponseEntity = null;
 		
-		String userUrl = "http://localhost:8060/user/1";
+		String userUrl = System.getenv("user_path");
 		Response<UserDto> userResponse = new Response<UserDto>();
 		ResponseEntity<Response<UserDto>> userResponseEntity = null;
 		UriComponentsBuilder builder = null;

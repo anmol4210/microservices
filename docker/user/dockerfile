@@ -1,0 +1,5 @@
+FROM openjdk:8-jdk
+	
+COPY user.jar /app/api.jar
+
+CMD ["java", "-jar", "/app/api.jar"]

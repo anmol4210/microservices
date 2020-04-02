@@ -1,8 +1,0 @@
-package com.nagp.user.controller;
-
-@RestController
-@RequestMapping(value = "/delivery")
-@EnableCircuitBreaker
-public class UserController {
-
-}

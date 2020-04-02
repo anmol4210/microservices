@@ -1,8 +1,0 @@
-package com.nagp.user.services;
-
-import com.nagp.user.dto.Response;
-import com.nagp.user.dto.UserDto;
-
-public interface getUser {
-	Response<UserDto> getUser(String userId);
-}

@@ -1,7 +1,0 @@
-package com.nagp.order.service.impl;
-
-import com.nagp.order.service.OrderService;
-
-public class OrderServiceImpl implements OrderService{
-
-}

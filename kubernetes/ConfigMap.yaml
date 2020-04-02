@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: special-config
+  namespace: default
+data:
+  special.order: http://order-pod-m9bbb/order/1
+  special.user: http://user-pod-6vt6g/user/1

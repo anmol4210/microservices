@@ -1,8 +1,0 @@
-package com.nagp.order.service;
-
-import com.nagp.order.dto.OrderDto;
-import com.nagp.order.dto.Response;
-
-public interface OrderService {
-	Response<OrderDto> getOder(String orderId);
-}

@@ -1,5 +1,0 @@
-package com.nagp.order.dto;
-
-public class Response<T> {
-
-}
