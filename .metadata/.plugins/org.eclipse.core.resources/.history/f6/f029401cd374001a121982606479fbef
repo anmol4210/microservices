@@ -1,0 +1,5 @@
+package com.nagp.orderDetails.service;
+
+public interface OrderDetailsService {
+Response<OrderDetailsDto> getUserOrderDetails(String userId);
+}

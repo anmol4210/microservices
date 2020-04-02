@@ -1,0 +1,8 @@
+package com.nagp.user.dto;
+
+public class Response {
+
+	private String name;
+	private String age;
+	private String email;
+}

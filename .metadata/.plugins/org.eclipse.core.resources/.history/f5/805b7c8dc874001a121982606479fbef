@@ -1,0 +1,15 @@
+package com.nagp.user.services.impl;
+
+import com.nagp.user.dto.Response;
+import com.nagp.user.dto.UserDto;
+import com.nagp.user.services.UserService;
+
+public class UserServiceImpl implements UserService{
+
+	@Override
+	public Response<UserDto> getUser(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

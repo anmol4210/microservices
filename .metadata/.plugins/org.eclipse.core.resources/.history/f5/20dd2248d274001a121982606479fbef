@@ -1,0 +1,7 @@
+package com.nagp.orderDetails.dto;
+
+public class OrderDetailsDto {
+
+	private UserDto userDetails;
+	private OrderDto orders;
+}
