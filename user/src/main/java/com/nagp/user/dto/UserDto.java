@@ -30,8 +30,8 @@ public class UserDto {
 	}
 	
 	public UserDto() {
-		this.name = "John";
-		this.age = "23";
-		this.email = "john.doe@google.com";
+//		this.name = "John";
+//		this.age = "23";
+//		this.email = "john.doe@google.com";
 	}
 }
