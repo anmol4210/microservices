@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: user
+  labels:
+    app: user
+    purpose: demonstrate-envars
+spec:
+  containers:
+  - name: user
+    image: anmol4210/kubernetes-user:v3
+    env:
+    - name: sqlURL
+      value: "10.125.15.235"
+    - name: jaggerURL
+      value: "10.125.4.47"
+    - name: sqlUsername
+      valueFrom:
+        secretKeyRef:
+          name: my-db-config
+          key: username
+    - name: sqlPassword
+      valueFrom:
+        secretKeyRef:
+          name: my-db-config
+          key: password

@@ -1,5 +1,7 @@
 package com.nagp.user.services.impl;
 
+import java.util.regex.Pattern;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,11 +19,24 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	public Response<UserDto> getUser(String userId) {
+		
+		
+		boolean isValidId = Pattern.matches("[0-9]+", userId);
+		Response<UserDto> response = new Response<UserDto>();
+		
+		if(!isValidId) {
+//			ProductsApplication.log.info("Enter valid User Id  " + userId);
+//			Response<UserDto> response = new Response<UserDto>();
+			response.setStatus(204);
+			response.setMessage("Enter valid User Id");
+			return response;
+		}
+		
 		int searchId = Integer.parseInt(userId);
 		
 		User user = userRepository.search(searchId);
 		UserDto userDto = new UserDto();
-		Response<UserDto> response = new Response<UserDto>();
+		
 		
 		if (user!=null) {
 		userDto.setAge(user.getAge());

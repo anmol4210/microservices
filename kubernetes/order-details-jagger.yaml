@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: order-details
+ labels:
+  app: order-details
+spec:
+ containers:
+ - name: order-details-container
+   image: anmol4210/orderdetails:v2
+   env:
+    - name: jaggerURL
+      value: "10.125.4.47"
+    - name: order_path
+      value: "http://10.125.10.223:8050/order/"
+    - name: user_path
+      value: "http://10.125.4.77:8060/user/"

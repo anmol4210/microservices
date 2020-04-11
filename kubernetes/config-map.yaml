@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-map
+  namespace: default
+data:
+  user-path: "http://10.125.4.77:8060/user/"
+  order-path: "http://10.125.10.223:8050/order/"
+  jagger-url: "10.125.4.47"

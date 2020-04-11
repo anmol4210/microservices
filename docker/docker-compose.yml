@@ -1,0 +1,30 @@
+version: "3"
+services:
+  user:
+    image: user-service:v1  
+    ports:      
+      - "8060:8060"
+    networks:
+      - consumer-producer
+    depends_on:
+      - mysqldb
+  mysqldb:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=user
+      - MYSQL_PASSWORD=root
+    networks:
+      - consumer-producer
+    ports:
+      - "3306:3306"
+
+   
+
+networks:
+  consumer-producer:
+    
+    
+      
+    
+  
