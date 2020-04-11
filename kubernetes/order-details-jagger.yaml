@@ -10,8 +10,17 @@ spec:
    image: anmol4210/orderdetails:v2
    env:
     - name: jaggerURL
-      value: "10.125.4.47"
+      valueFrom:
+        configMapKeyRef:
+          name: config-map
+          key: jagger-url
     - name: order_path
-      value: "http://10.125.10.223:8050/order/"
+      valueFrom:
+        configMapKeyRef:
+          name: config-map
+          key: order-path
     - name: user_path
-      value: "http://10.125.4.77:8060/user/"
+      valueFrom:
+        configMapKeyRef:
+          name: config-map
+          key: user-path
