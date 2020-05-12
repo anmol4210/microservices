@@ -38,11 +38,11 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
 //		System.out.println(System.getenv("ES_HOME"));
 //		System.out.println(System.getenv("OneDrive"));
 //		System.getenv(String name);
-		String orderUrl = System.getenv("order_path");
+		String orderUrl = System.getenv("order_path")+userId;
 		Response<List<OrderDto>> orderResponse = new Response<List<OrderDto>>();
 		ResponseEntity<Response<List<OrderDto>>> orderResponseEntity = null;
 		
-		String userUrl = System.getenv("user_path");
+		String userUrl = System.getenv("user_path")+userId;
 		Response<UserDto> userResponse = new Response<UserDto>();
 		ResponseEntity<Response<UserDto>> userResponseEntity = null;
 		UriComponentsBuilder builder = null;

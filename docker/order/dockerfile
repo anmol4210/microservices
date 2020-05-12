@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk
 	
-COPY order.jar /app/api.jar
+COPY kubernete-order.jar /app/api.jar
 
 CMD ["java", "-jar", "/app/api.jar"]

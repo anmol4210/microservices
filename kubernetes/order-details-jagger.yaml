@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: order-details
+ labels:
+  app: order-details
+spec:
+ containers:
+ - name: order-details-container
+   image: anmol4210/orderdetails:v2
+   env:
+    - name: jaggerURL
+      valueFrom:
+        configMapKeyRef:
+          name: config-map
+          key: jagger-url
+    - name: order_path
+      valueFrom:
+        configMapKeyRef:
+          name: config-map
+          key: order-path
+    - name: user_path
+      valueFrom:
+        configMapKeyRef:
+          name: config-map
+          key: user-path
