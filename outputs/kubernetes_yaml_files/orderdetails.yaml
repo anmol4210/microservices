@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: order-details-pod
+spec:
+ containers:
+ - name: order-details-container
+   image: anmol4210/orderdetails:v1
+   env:
+     - name: order_path
+       valueFrom:
+         configMapKeyRef:
+           name: special-config
+           key: special.order
+     - name: user_path
+       valueFrom:
+         configMapKeyRef:
+           name: special-config
+           key: special.user
